@@ -82,18 +82,26 @@ const filterPies = (array, instructor) => {
 }
 
 const handleButtonClick = (event) => {
-  if (event.target.id === "All") {
+  // if (event.target.id === "All") {
+  //   pieBuilder(pies);
+  // }
+  // if (event.target.id === "Trinity") {
+  //   pieBuilder(filterPies(pies, "Trinity"));
+  // }
+  // if (event.target.id === "Aja") {
+  //   pieBuilder(filterPies(pies, "Aja"));
+  // }
+  // if (event.target.id === "Doc") {
+  //   pieBuilder(filterPies(pies, "Doc"));
+  // }
+
+  if(event.target.id === "All" || event.target.id === "buttonContainer") {
     pieBuilder(pies);
+  } else {
+    const pieArray = filterPies(pies, event.target.id);
+    pieBuilder(pieArray);
   }
-  if (event.target.id === "Trinity") {
-    pieBuilder(filterPies(pies, "Trinity"));
-  }
-  if (event.target.id === "Aja") {
-    pieBuilder(filterPies(pies, "Aja"));
-  }
-  if (event.target.id === "Doc") {
-    pieBuilder(filterPies(pies, "Doc"));
-  }
+
 }
 
 const pieBuilder = (piesArray) => {
