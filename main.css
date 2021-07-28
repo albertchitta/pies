@@ -2,7 +2,7 @@ body {
   background-color: aqua;
 }
 
-.pieStyles, 
+.pieStyles,
 .buttonStyles {
   display: flex;
   flex-wrap: wrap;
